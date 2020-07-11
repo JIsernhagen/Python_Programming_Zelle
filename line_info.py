@@ -12,9 +12,12 @@ def main():
     length = sqrt(((a.getX()+ b.getX())/2)**2 + ((a.getY()+ b.getY())/2)**2)
     rise = b.getY()-a.getY()
     run = b.getX()-a.getX()
-    slope = rise / run
+    if run !=0:
+        slope = str(round(rise / run,2))
+    else:
+        slope = "Slope is undefined."
     Text(Point(50,230),"Length: " + str(round(length,2))).draw(win)
-    Text(Point(200,230),"Slope: " + str(round(slope,2))).draw(win)
+    Text(Point(200,230),"Slope: " + slope).draw(win)
     win.getMouse()
 
 main()

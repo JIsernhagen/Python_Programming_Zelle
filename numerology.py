@@ -1,3 +1,5 @@
+def acronym()
+
 def main():
     name = input("Please input name: ")
     name = name.lower()

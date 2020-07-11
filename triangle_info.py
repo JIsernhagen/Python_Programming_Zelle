@@ -1,6 +1,8 @@
 from graphics import *
 from math import sqrt
 
+
+
 def main():
     win = GraphWin("Triangle Information", 320, 240)
     a = win.getMouse()

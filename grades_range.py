@@ -1,5 +1,4 @@
-def main():
-    score = eval(input("Please input score: "))
+def grade(score):
     if score >= 90:
         grade = 'A'
     elif score >=80:
@@ -10,6 +9,10 @@ def main():
         grade = 'D'
     else:
         grade = 'F'
-    print("The grade is: {0}".format(grade))
+    return grade
+
+def main():
+    score = eval(input("Please input score: "))
+    print("The grade is: {0}".format(grade(score)))
 
 main()
