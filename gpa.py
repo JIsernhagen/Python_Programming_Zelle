@@ -7,6 +7,10 @@ class Student:
         self.hours = float(hours)
         self.qpoints = float(qpoints)
 
+    def addGrade(self, gradePoint, credits):
+        self.gradePoint = float(gradePoint)
+        self.credits = float(credits)
+
     def getName(self):
         return self.name
 
