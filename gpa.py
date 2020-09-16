@@ -8,8 +8,35 @@ class Student:
         self.qpoints = float(qpoints)
 
     def addGrade(self, gradePoint, credits):
-        self.gradePoint = float(gradePoint)
-        self.credits = float(credits)
+        self.hours += float(credits)
+        self.qpoints += float(credits) * float(gradePoint)
+
+    def addLetterGrade(self, grade, credits):
+        self.hours += float(credits)
+        if(grade=="A"):
+            self.qpoints += float(credits) * float(4.0)
+        elif(grade=="A-"):
+            self.qpoints += float(credits) * float(3.7)
+        elif(grade=="B+"):
+            self.qpoints += float(credits) * float(3.3)
+        elif(grade=="B"):
+            self.qpoints += float(credits) * float(3.0)
+        elif(grade=="B-"):
+            self.qpoints += float(credits) * float(2.7)
+        elif(grade=="C+"):
+            self.qpoints += float(credits) * float(2.3)
+        elif(grade=="C"):
+            self.qpoints += float(credits) * float(2.0)
+        elif(grade=="C-"):
+            self.qpoints += float(credits) * float(1.7)
+        elif(grade=="D+"):
+            self.qpoints += float(credits) * float(1.3)
+        elif(grade=="D"):
+            self.qpoints += float(credits) * float(1.0)
+        elif(grade=="D-"):
+            self.qpoints += float(credits) * float(0.7)
+        elif(grade=="F"):
+            self.qpoints += float(credits) * float(0.5)
 
     def getName(self):
         return self.name
@@ -22,6 +49,8 @@ class Student:
 
     def gpa(self):
         return self.qpoints/self.hours
+
+
 
 def makeStudent(infoStr):
     # infoStr is a tab-separated line:  name hours qpoints
